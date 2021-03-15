@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function weibo($food){
 
         if($food->type==1 || $food->type==2){
-            return "不可加热带皮或者带壳食物";
+            return "不可加热带皮或者带壳ss食物";
         }
 
         if($this->status==0){
