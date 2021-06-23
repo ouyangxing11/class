@@ -6,13 +6,18 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "barryvdh/laravel-cors": "v1.0.0",
         "doctrine/instantiator": "1.0.x-dev",
         "ejiayou/p-openapi": "^1.0",
+        "elasticsearch/elasticsearch": "7.12.*",
         "fideloper/proxy": "~3.3",
+        "guzzlehttp/guzzle": "^7.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
+        "oyxblog/test": "^1.0",
         "predis/predis": "^1.1",
-        "vladimir-yuldashev/laravel-queue-rabbitmq": "6.0"
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "6.0",
+        "wechatpay/wechatpay-guzzle-middleware": "^0.2.2"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -25,6 +30,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "helper/helpers.php"
         ],
         "psr-4": {
             "App\\": "app/"

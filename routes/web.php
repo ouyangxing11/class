@@ -29,10 +29,27 @@ Route::any("index/getDistance",'IndexController@getDistance');
 Route::any("index/test_yield",'IndexController@test_yield');
 Route::any("index/merge",'IndexController@array_merge');
 Route::any("test/test",'TestController@test');
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::any('home/home', 'HomeController@index')->name('home');
+Route::get('home/mongo', 'HomeController@mongo')->name('mongo');
+Route::get('home/composer_test', 'HomeController@composer_test')->name('composer_test');
+Route::get('home/old_fib/{n}', 'HomeController@old_fib');
+Route::get('home/fib/{n}', 'HomeController@fib');
+Route::get('home/new_fib/{n}', 'HomeController@new_fib');
+Route::get('home/db/{amount}', 'HomeController@dp');
+Route::get('home/egg', 'HomeController@fallegg1');
+Route::get('home/money', 'HomeController@choose_monkey_king');
+Route::get('home/neicun', 'HomeController@collect');
+Route::get('home/filter', 'HomeController@filter');
+Route::get('queue/main', 'Queue@main');
+Route::get('queue/test/{i}', 'NewQueue@backtrack');
 
+Route::any('es/index', 'EsController@index');
+Route::any('es/get', 'EsController@get');
+Route::any('wxtest/send_coupon', 'WxTestController@wx_send');
+Route::any('bloom/add', 'FilteRepeatedComments@add_test');
+Route::any('bloom/exist', 'FilteRepeatedComments@exists_test');
 
 Route::get('publish', function () {
     // Route logic...

@@ -13,5 +13,8 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
+        'stripe/*',
+        'http://mytest:9600',
+        'http://mytest:9600/*',
     ];
 }
